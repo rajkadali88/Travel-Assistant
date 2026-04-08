@@ -40,6 +40,7 @@ def create_base_prompt(trip_details:query)->str:
         
 @app.post('/flight')        
 def run_flight_agent(trip_details:query):
+    "This is flight agent api which helps to run the flight agent"
     base_prompt = create_base_prompt(trip_details)
     return {'result':flight_agent.run(user_prompt=base_prompt+"Find flight options for this trip between the origin and destination.")}
     

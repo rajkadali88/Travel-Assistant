@@ -45,6 +45,7 @@ def run_flight_agent(trip_details:query):
     
 @app.post('/hotel')
 def run_hotel_agent(details:hotel_query):
+    '''this is the api for hotel agent'''
     return {'result':hotel_agent.run(user_prompt="Find the hotel options in {details.destination} that fit in the budget level of {details.budget}")}
     
     

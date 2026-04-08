@@ -28,6 +28,7 @@ flight_agent = init_flight_agent()
 hotel_agent = init_hotel_agent() 
         
 def create_base_prompt(trip_details:query)->str:
+    '''This is the standard template for prompt'''
     return f"""
     Plan a trip with the following details:
     - Origin: {trip_details.origin}
